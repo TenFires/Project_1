@@ -1,0 +1,169 @@
+
+.toggle-button-cover
+{
+    z-index: 10;
+    display: block;
+    position: absolute;
+    float: right;
+    width: 94px;
+    height: 29px;
+    box-sizing: border-box;
+
+    
+}
+
+
+.button-cover:before
+{
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #e7efef;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 5px;
+    
+}
+
+.button-cover, .knobs, .layer
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+}
+
+.button
+{
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+}
+
+
+
+.button.b2
+{
+    border-radius: 10px;
+    
+}
+
+.checkbox
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+    
+}
+
+.knobs
+{
+    z-index: 2;
+    
+
+}
+
+.layer
+{
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    transition: 0.3s ease all;
+    z-index: 1;
+
+
+}
+
+
+
+#button-7 .knobs:before, #button-7 .knobs:after, #button-7 .knobs span
+{
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 10px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    padding: 9px 4px;
+    border-radius: 30% 0 0 30%;
+    transition: 0.3s ease all;
+    
+    
+    
+}
+
+#button-7 .knobs:before
+{
+    content: '';
+    left: 4px;
+    background: rgba(255,255,255,0.2);
+    font-size: 19px;
+   
+
+
+}
+
+#button-7 .knobs:after
+{
+    content: 'F';
+    right: 4px;
+    color: #fff;
+    opacity: 0.4;
+    font-size: 18px;
+
+}
+
+#button-7 .knobs span
+{
+    display: inline-block;
+    left: 4px;
+    color: #fff;
+    z-index: 1;
+    font-size: 18px;
+}
+
+#button-7 .checkbox:checked + .knobs span
+{
+    color: #fff;
+    opacity: 0.4;
+
+}
+
+#button-7 .checkbox:checked + .knobs:before
+{
+    left: 42px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 0 30% 30% 0;
+
+
+
+}
+
+
+#button-7 .checkbox:checked + .knobs:after
+{
+    color: #fff;
+    opacity: 1;
+}
+
+
+#button-7 .checkbox:checked ~ .layer
+{
+    background: rgba(255,255,255,0.2);
+    
+}
+

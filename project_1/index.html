@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fm.revealator.jquery.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+    <div class="weather">
+      <div class="revealator-slideup revealator-duration10 revealator-delay1">      
+       <div class="main">
+            <div class="location">
+               <a href='#' id='city_text'> 
+               Омск 
+               </a>
+               <br>
+               <div class="links">
+                    <a href='#' id='trigger'>
+                  Сменить город
+                    </a>
+                    <img src="img/path-2.png" id="arrow" alt="#">
+                    <a href="#" id="my location"> Мое местоположение</a>
+                </div>
+                      <div id='box'>
+                            <div class="container">
+                                 <input id="city" name="city" type="text" />
+                                  <a href='#' id='trigger'>
+                                  <button id="ok"> ОК </button>
+                                 </a>
+                            </div>       
+                      </div> 
+
+
+            </div>
+
+            <div class="switcher_deg">
+             <div id="deg">
+                 &deg;
+             </div>
+                <div class="toggle-button-cover">
+
+                    <div class="button b2" id="button-7">
+                      <input type="checkbox" class="checkbox">
+                      <div class="knobs">
+                        <span>C</span>
+                      </div>
+                      <div class="layer"></div>
+
+                  </div>
+                </div>
+
+            </div>
+        </div>
+    
+
+        <div class="weather_now">
+           <div class="temp_1">
+                <img src="img/cloudy.png" id=img_weather alt="#">
+
+                <span id="temp">
+                   19 &deg;
+                </span>
+            </div>
+            <p id="condition">
+              Преимущественно солнечно
+            </p>
+
+        </div>
+        
+        <div class="info">
+                <div class="wind">
+                    <h3 id=info_weather>
+                        Ветер
+                    </h3>
+                    <span id="info_w2">
+                        5 м/c, западный
+                    </span>
+                </div>
+                <div class="pressure">
+                    <h3 id=info_weather>
+                        Давление
+                    </h3>
+                    <span id="info_w2">
+                       752 мм рт. ст.
+                    </span>
+                </div>
+                <div class="wet">
+                    <h3 id=info_weather>
+                        Влажность
+                    </h3>
+                    <span id="info_w2">
+                        60%
+                    </span>
+                </div>
+                <div class="chance_prec">
+                     <h3 id=info_weather>
+                        Вероятность дождя
+                    </h3>
+                     <span id="info_w2">
+                        10%
+                    </span>
+                </div>
+            
+        </div>
+        </div>
+    </div>
+
+     
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+     <script type='text/javascript'> 
+    $(document).ready(function() { 
+      $("A#trigger").toggle(function() { 
+
+        $("DIV#box").fadeIn(); 
+        return false; 
+      },  
+      function() { 
+    
+        $("DIV#box").fadeOut();
+        return false; 
+      });
+    });
+  </script> 
+<script src="js/fm.revealator.jquery.min.js"></script>
+
+ 
+
+
+</body>
+</html>
