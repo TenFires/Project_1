@@ -23,6 +23,7 @@ body{
 }
 .weather{
     padding: 0px 100px 0px 100px;
+    width: 1366px;
     margin:0 auto;
 
 }
